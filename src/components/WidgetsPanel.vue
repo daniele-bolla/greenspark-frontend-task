@@ -11,8 +11,6 @@ import { computed, defineComponent } from "vue";
 import { useStore } from "vuex";
 
 export default defineComponent({
-  name: "Main",
-
    async setup() {
     const store = useStore();
 
