@@ -5,7 +5,7 @@ import axios, {
     AxiosError,
 } from "axios";
 
-const baseURL = "https://api.mocki.io/v2/016d11e8 ";
+const baseURL = "https://api.mocki.io/v2/016d11e8";
 
 const config: AxiosRequestConfig = {
     baseURL
