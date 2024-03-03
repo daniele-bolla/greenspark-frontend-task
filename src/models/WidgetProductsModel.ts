@@ -1,4 +1,3 @@
-
 export interface WidgetProductsModel {
     id: number;
     type: "carbon" | "plastic bottles" | "trees";
