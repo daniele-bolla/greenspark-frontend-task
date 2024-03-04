@@ -20,9 +20,9 @@
     </div>  
     <div class="px-1">
         <ul class="text-green">
-          <li class="mt-2.5 flex items-center justify-between"><span>Link to Public Profile <icon-info></icon-info></span></li>
-          <li class="mt-2.5 flex items-center justify-between"><span>Badge colour</span> <badge-colours :selectedColor="widget.selectedColor"></badge-colours></li>
-          <li class="mt-2.5 flex items-center justify-between">Activate badge</li>
+          <li class="mt-2.5 flex items-center justify-between"><div>Link to Public Profile <icon-info></icon-info></div> <base-checkbox :id="`${id}-linked`" :value="widget.linked"></base-checkbox></li>
+          <li class="mt-2.5 flex items-center justify-between"><div>Badge colour</div> <badge-colours :selectedColor="widget.selectedColor"></badge-colours></li>
+          <li class="mt-2.5 flex items-center justify-between"><div>Activate badge</div> <base-toggle :id="`${id}-active`" :value="widget.active"></base-toggle></li>
         </ul>
       </div>
   </div>
@@ -34,16 +34,21 @@ import { type PropType, defineComponent } from "vue";
 import IconLogo from "../assets/IconLogo.vue";
 import IconInfo from "../assets/IconInfo.vue";
 import BadgeColours from "./BadgeColours.vue";
+import BaseCheckbox from "./BaseCheckbox.vue";
+import BaseToggle from "./BaseToggle.vue";
 
 export default defineComponent({
 
   props: {
     widget: { type: Object as PropType<WidgetProductsModel>, required: true },
+    id:{type: String, required:true}
   },
   components: {
     IconLogo,
     IconInfo,
-    BadgeColours
+    BadgeColours,
+    BaseCheckbox,
+    BaseToggle
   },
 });
 </script>

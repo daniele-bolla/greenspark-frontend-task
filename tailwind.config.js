@@ -17,7 +17,7 @@ export default {
         darker:"#212121"
       },
       white:{
-        DEFAULT:"#2E3A8C",
+        DEFAULT:"#FFFFFF",
         dark:"#F9F9F9"
       }
     },

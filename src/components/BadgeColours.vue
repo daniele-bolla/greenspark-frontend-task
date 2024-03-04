@@ -8,7 +8,7 @@
     'bg-white-dark': colour == 'white',
     'bg-grey-darker': colour == 'black',
     }"   
-  class="box-border w-4 h-4  mr-1 last:mr-0" :key="colour" v-for="colour in badgeColours">
+  class="box-border w-4 h-4  mr-1.5 last:mr-0 hover:cursor-pointer hover:opacity-80" :key="colour" v-for="colour in badgeColours">
   </div>
 </div> 
 
