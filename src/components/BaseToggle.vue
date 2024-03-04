@@ -2,7 +2,13 @@
   <label :for="id" class="inline-flex items-center cursor-pointer">
     <input :id="id" type="checkbox" :checked="value" class="sr-only peer" />
     <div
-      class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"
+      class="relative w-10 h-5 border border-green-light  rounded-full shadow-inner
+      peer peer-checked:after:translate-x-full 
+      rtl:peer-checked:after:-translate-x-full 
+      peer-checked:after:border-green peer-checked:bg-green peer-checked:border-grey 
+      after:content-[''] after:hover:ring-4 after:hover:ring-green-light 
+      after:absolute after:-top-[1px] after:bg-white after:border after:border-grey after:-start-[1px] after:rounded-full 
+      after:h-5 after:w-5 after:transition-all "
     ></div>
   </label>
 </template>

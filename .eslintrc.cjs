@@ -12,6 +12,8 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'plugin:vuejs-accessibility/recommended',
     'eslint:recommended',
+    "prettier",
+    'prettier-plugin-tailwindcss',
     '@vue/typescript/recommended',
     '@vue/prettier',
     '@vue/eslint-config-typescript'

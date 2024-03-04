@@ -5,7 +5,9 @@
         :id="id"
         type="checkbox"
         :checked="value"
-        class="w-[18px] h-[18px] rounded-sm accent-green focus:ring-blue-500 focus:ring-2"
+        class="relative block w-[18px] h-[18px] rounded-sm border border-grey-darker accent-green  hover:cursor-pointer
+        after:content-[''] after:hidden after:hover:block after:absolute after:w-8 after:h-8 after:top-1/2 after:left-1/2 after:-translate-y-1/2 after:-translate-x-1/2 
+        after:bg-green-light after:opacity-60 after:z-10 after:rounded-full"
       />
     </label>
   </div>
@@ -30,12 +32,12 @@ export default defineComponent({
       required: true
     }
   },
-  emits: ['update:modelValue'],
-  setup(props, { emit }) {
+  emits: ['update'],
+  setup(_, { emit }) {
     return {
       handleChange(event: Event): void {
         const checked = getValue(event)
-        emit('update:modelValue', checked)
+        emit('update', checked)
       }
     }
   }

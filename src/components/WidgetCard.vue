@@ -25,7 +25,11 @@
       <ul class="text-green">
         <li class="mt-2.5 flex items-center justify-between">
           <div>Link to Public Profile <icon-info></icon-info></div>
-          <base-checkbox :id="`${id}-linked`" :value="widget.linked"></base-checkbox>
+          <base-checkbox
+            :id="`${id}-linked`"
+            :value="widget.linked"
+            @update="setLinkedStatus"
+          ></base-checkbox>
         </li>
         <li class="mt-2.5 flex items-center justify-between">
           <div>Badge colour</div>
@@ -33,7 +37,11 @@
         </li>
         <li class="mt-2.5 flex items-center justify-between">
           <div>Activate badge</div>
-          <base-toggle :id="`${id}-active`" :value="widget.active"></base-toggle>
+          <base-toggle
+            :id="`${id}-active`"
+            :value="widget.active"
+            @update="setActiveStatus"
+          ></base-toggle>
         </li>
       </ul>
     </div>
@@ -59,7 +67,17 @@ export default defineComponent({
   },
   props: {
     widget: { type: Object as PropType<WidgetProductsModel>, required: true },
-    id: { type: String, required: true }
+    id: { type: Number, required: true }
+  },
+  setup(props) {
+    return {
+      setActiveStatus(event: Event) {
+        console.log(props, event)
+      },
+      setLinkedStatus(event: Event) {
+        console.log(props.id, event)
+      }
+    }
   }
 })
 </script>

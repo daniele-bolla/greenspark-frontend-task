@@ -7,7 +7,10 @@ export default {
     extend: {},
     colors: {
       blue: { DEFAULT: '#2E3A8C' },
-      green: { DEFAULT: '#3B755F' },
+      green: {
+        light: '#AFC6BD',
+        DEFAULT: '#3B755F'
+      },
       beige: { DEFAULT: '#F2EBDB' },
       grey: {
         DEFAULT: '#B0B0B0',

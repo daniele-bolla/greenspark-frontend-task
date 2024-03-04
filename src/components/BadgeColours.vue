@@ -23,7 +23,7 @@ import { badgeColours } from '@/models/WidgetProductsModel'
 export default defineComponent({
   props: {
     selectedColor: {
-      type: Object as PropType<WidgetProductsModel['selectedColor']>,
+      type: String as PropType<WidgetProductsModel['selectedColor']>,
       required: true
     }
   },
