@@ -1,4 +1,4 @@
-import { type WidgetProductsModel } from "../../../models/WidgetProductsModel";
+import { type WidgetProductsModel } from '../../../models/WidgetProductsModel'
 
 export interface WidgetProductsState {
   all: WidgetProductsModel[]
@@ -6,6 +6,6 @@ export interface WidgetProductsState {
 
 const state = (): WidgetProductsState => ({
   all: []
-});
+})
 
-export default state;
+export default state

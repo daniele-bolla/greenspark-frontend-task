@@ -1,7 +1,7 @@
-import type { WidgetProductsState } from "./state";
+import type { WidgetProductsState } from './state'
 
-const getAll = (state: WidgetProductsState): WidgetProductsState['all'] => state.all;
+const getAll = (state: WidgetProductsState): WidgetProductsState['all'] => state.all
 
 export default {
   getAll
-};
+}

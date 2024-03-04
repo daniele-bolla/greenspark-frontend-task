@@ -1,13 +1,13 @@
-import mutations from "./mutations";
-import actions from "./actions";
-import getters from "./getters";
-import state from "./state";
-import type { WidgetProductsState } from "./state";
+import mutations from './mutations'
+import actions from './actions'
+import getters from './getters'
+import state from './state'
+import type { WidgetProductsState } from './state'
 
-import type { Module } from "vuex";
+import type { Module } from 'vuex'
 
 export interface RootState {
-  WidgetProductsState: WidgetProductsState;
+  WidgetProductsState: WidgetProductsState
 }
 
 const module: Module<WidgetProductsState, RootState> = {
@@ -15,7 +15,7 @@ const module: Module<WidgetProductsState, RootState> = {
   state: state(),
   actions,
   getters,
-  mutations,
-};
+  mutations
+}
 
-export default module;
+export default module
