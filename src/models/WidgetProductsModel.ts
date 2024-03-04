@@ -1,9 +1,24 @@
+export const badgeColours = ["white", "black", "blue","green","beige"] as const;
+type Colors = typeof badgeColours[number];
+
+// export const badgeColoursMap = {
+//     "white":"white-dark", 
+//     "black":"grey-darker", 
+//     "blue":"blue",
+//     "green":"green",
+//     "beige":"beige"
+// }
+// type Colors = keyof typeof badgeColoursMap;
+
+type Type= "carbon" | "plastic bottles" | "trees";
+type Action= "collects" | "plants" | "offsets";
+
 export interface WidgetProductsModel {
     id: number;
-    type: "carbon" | "plastic bottles" | "trees";
+    type: Type;
     amount: number;
-    action: "collects" | "plants" | "offsets";
+    action: Action;
     active: boolean;
     linked: boolean,
-    selectedColor: "white" | "black" | "blue";
+    selectedColor: Colors;
 }

@@ -20,7 +20,7 @@ module.exports = {
   },
   plugins: ["vuejs-accessibility"],
 rules: {
-  "vuejs-accessibility/rule-name": "error",
+  //"vuejs-accessibility/rule-name": "error",
   "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
   "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
 },

@@ -21,7 +21,8 @@ const apiService: AxiosInstance = axios.create(config);
 
 const errorHandler = (error: AxiosError) => {
     const isRespError = apiError(error)
-    if (isRespError && (isRespError.status == 401)) {
+    if (isRespError) {
+        console.log(isRespError)
     }
     return Promise.reject({ ...error });
 };
