@@ -15,14 +15,13 @@ module.exports = {
     'prettier',
     '@vue/typescript/recommended',
     '@vue/prettier',
-    '@vue/eslint-config-typescript',
+    '@vue/eslint-config-typescript'
   ],
   parserOptions: {
     ecmaVersion: 'latest'
   },
   plugins: ['vuejs-accessibility'],
   rules: {
-    //"vuejs-accessibility/rule-name": "error",
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
   }

@@ -8,9 +8,6 @@ export default {
     extend: {
       fontFamily: {
         cabin: ['"Cabin"', ...defaultTheme.fontFamily.sans]
-      },
-      boxShadow: {
-        '4xl': '0px 42px 76px rgba(0, 0, 0, 0.05)'
       }
     },
     colors: {
