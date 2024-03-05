@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-lg shadow-2xl bg-dark-white max-w-[850px] w-full p-9">
+  <div class="rounded-lg shadow-2xl bg-white-dark max-w-[850px] w-full p-9">
     <h1 class="text-2xl text-dark_grey font-semibold border-b-2 border-grey pb-3 mb-5">
       Per product widgets
     </h1>

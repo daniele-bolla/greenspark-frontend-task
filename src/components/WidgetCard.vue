@@ -24,7 +24,7 @@
     <div class="px-1">
       <ul class="text-green">
         <li class="mt-2.5 flex items-center justify-between">
-          <div>Link to Public Profile <icon-info></icon-info></div>
+          <div>Link to Public Profile <info-tooltip></info-tooltip></div>
           <base-checkbox
             :id="`${id}-linked`"
             :value="widget.linked"
@@ -56,6 +56,7 @@ import IconInfo from '../assets/IconInfo.vue'
 import BadgeColours from './BadgeColours.vue'
 import BaseCheckbox from './BaseCheckbox.vue'
 import BaseToggle from './BaseToggle.vue'
+import InfoTooltip from './InfoTooltip.vue'
 
 export default defineComponent({
   components: {
@@ -63,7 +64,8 @@ export default defineComponent({
     IconInfo,
     BadgeColours,
     BaseCheckbox,
-    BaseToggle
+    BaseToggle,
+    InfoTooltip
   },
   props: {
     widget: { type: Object as PropType<WidgetProductsModel>, required: true },

@@ -12,11 +12,10 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'plugin:vuejs-accessibility/recommended',
     'eslint:recommended',
-    "prettier",
-    'prettier-plugin-tailwindcss',
+    'prettier',
     '@vue/typescript/recommended',
     '@vue/prettier',
-    '@vue/eslint-config-typescript'
+    '@vue/eslint-config-typescript',
   ],
   parserOptions: {
     ecmaVersion: 'latest'
