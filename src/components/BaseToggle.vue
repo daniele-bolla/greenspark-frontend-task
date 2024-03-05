@@ -8,12 +8,8 @@
 </template>
 
 <script lang="ts">
+import { getInputBooleanValue } from '@/utils/getInputBooleanValue'
 import { defineComponent } from 'vue'
-
-function getValue(event: Event): boolean | undefined {
-  const checked = (event.target as HTMLInputElement).checked
-  return checked
-}
 
 export default defineComponent({
   props: {
@@ -30,7 +26,7 @@ export default defineComponent({
   setup(props, { emit }) {
     return {
       handleChange(event: Event): void {
-        const checked = getValue(event)
+        const checked = getInputBooleanValue(event)
         emit('update:modelValue', checked)
       }
     }
