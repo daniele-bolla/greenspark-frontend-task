@@ -16,7 +16,15 @@ const mutations: MutationTree<WidgetProductsState> = {
   },
   setActive(state: WidgetProductsState, { id: widegetID, value }: setBoleanParams): void {
     const widget = state.all.find(({ id }) => widegetID == id)
-    if (widget) widget.active = value
+    if (widget) {
+      widget.active = value
+      if (value === true) {
+        const others = state.all.filter(({ id }) => widegetID != id)
+        others.forEach((w) => {
+          w.active = false
+        })
+      }
+    }
   },
   setLinked(state: WidgetProductsState, { id: widegetID, value }: setBoleanParams): void {
     const widget = state.all.find(({ id }) => widegetID == id)
