@@ -1,10 +1,18 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 // import {badgeColoursMap} from "./src/models/WidgetProductsModel"
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        cabin: ['"Cabin"', ...defaultTheme.fontFamily.sans]
+      },
+      boxShadow: {
+        '4xl': '0px 42px 76px rgba(0, 0, 0, 0.05)'
+      }
+    },
     colors: {
       blue: { DEFAULT: '#2E3A8C' },
       green: {

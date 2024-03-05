@@ -4,6 +4,7 @@
       'text-white-dark': ['green', 'blue', 'black'].includes(widget.selectedColor),
       'text-green': ['beige', 'white'].includes(widget.selectedColor)
     }"
+    class="pb-9 max-w-[220px]"
   >
     <div
       :class="{
@@ -13,12 +14,12 @@
         'bg-white-dark': widget.selectedColor == 'white',
         'bg-grey-darker': widget.selectedColor == 'black'
       }"
-      class="rounded-lg flex items-center p-2.5"
+      class="rounded-lg flex items-center p-3 h-[66px]"
     >
       <icon-logo class="mr-2.5"></icon-logo>
-      <div>
-        <p class="text-sm">This product {{ widget.action }}</p>
-        <h2 class="text-xl font-medium mt-1">{{ widget.amount }} {{ widget.type }}</h2>
+      <div class="flex flex-col">
+        <span class="text-xs">This product {{ widget.action }}</span>
+        <span class="text-[17px] font-bold truncate">{{ widget.amount }} {{ widget.type }}</span>
       </div>
     </div>
     <div class="px-1">
@@ -52,7 +53,6 @@
 import type { WidgetProductsModel } from '@/models/WidgetProductsModel'
 import { type PropType, defineComponent } from 'vue'
 import IconLogo from '../assets/IconLogo.vue'
-import IconInfo from '../assets/IconInfo.vue'
 import BadgeColours from './BadgeColours.vue'
 import BaseCheckbox from './BaseCheckbox.vue'
 import BaseToggle from './BaseToggle.vue'
@@ -61,7 +61,6 @@ import InfoTooltip from './InfoTooltip.vue'
 export default defineComponent({
   components: {
     IconLogo,
-    IconInfo,
     BadgeColours,
     BaseCheckbox,
     BaseToggle,
