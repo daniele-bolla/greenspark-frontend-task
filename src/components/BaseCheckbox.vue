@@ -6,6 +6,7 @@
         type="checkbox"
         :checked="value"
         class="relative block w-[18px] h-[18px] rounded-sm border border-grey-darker accent-green hover:cursor-pointer after:content-[''] after:hidden after:hover:block after:absolute after:w-8 after:h-8 after:top-1/2 after:left-1/2 after:-translate-y-1/2 after:-translate-x-1/2 after:bg-green-light after:opacity-60 after:z-10 after:rounded-full"
+        @input="handleChange"
       />
     </label>
   </div>

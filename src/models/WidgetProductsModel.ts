@@ -1,5 +1,4 @@
 export const badgeColours = ['white', 'black', 'blue', 'green', 'beige'] as const
-type Colors = (typeof badgeColours)[number]
 
 // export const badgeColoursMap = {
 //     "white":"white-dark",
@@ -9,7 +8,7 @@ type Colors = (typeof badgeColours)[number]
 //     "beige":"beige"
 // }
 // type Colors = keyof typeof badgeColoursMap;
-
+export type Colors = (typeof badgeColours)[number]
 type Type = 'carbon' | 'plastic bottles' | 'trees'
 type Action = 'collects' | 'plants' | 'offsets'
 

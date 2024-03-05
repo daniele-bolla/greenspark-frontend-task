@@ -34,7 +34,10 @@
         </li>
         <li class="mt-2.5 flex items-center justify-between">
           <div>Badge colour</div>
-          <badge-colours :selected-color="widget.selectedColor"></badge-colours>
+          <badge-colours
+            :selected-color="widget.selectedColor"
+            @update="setColorStatus"
+          ></badge-colours>
         </li>
         <li class="mt-2.5 flex items-center justify-between">
           <div>Activate badge</div>
@@ -57,6 +60,7 @@ import BadgeColours from './BadgeColours.vue'
 import BaseCheckbox from './BaseCheckbox.vue'
 import BaseToggle from './BaseToggle.vue'
 import InfoTooltip from './InfoTooltip.vue'
+import { useStore } from 'vuex'
 
 export default defineComponent({
   components: {
@@ -71,12 +75,17 @@ export default defineComponent({
     id: { type: Number, required: true }
   },
   setup(props) {
+    const store = useStore()
+    const { id } = props
     return {
-      setActiveStatus(event: Event) {
-        console.log(props, event)
+      setActiveStatus(value: boolean) {
+        store.commit('widget_products/setActive', { id, value })
       },
-      setLinkedStatus(event: Event) {
-        console.log(props.id, event)
+      setLinkedStatus(value: boolean) {
+        store.commit('widget_products/setLinked', { id, value })
+      },
+      setColorStatus(value: WidgetProductsModel['selectedColor']) {
+        store.commit('widget_products/setColor', { id, value })
       }
     }
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <div
+    <button
       v-for="colour in badgeColours"
       :key="colour"
       :class="{
@@ -12,7 +12,8 @@
         'bg-grey-darker': colour == 'black'
       }"
       class="box-border w-4 h-4 mr-1.5 last:mr-0 hover:cursor-pointer hover:opacity-80"
-    ></div>
+      @click="handleClick(colour)"
+    ></button>
   </div>
 </template>
 
@@ -27,8 +28,14 @@ export default defineComponent({
       required: true
     }
   },
-  setup() {
-    return { badgeColours }
+  emits: ['update'],
+  setup(_, { emit }) {
+    return {
+      badgeColours,
+      handleClick(colour: WidgetProductsModel['selectedColor']): void {
+        emit('update', colour)
+      }
+    }
   }
 })
 </script>
