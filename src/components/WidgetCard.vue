@@ -1,12 +1,14 @@
 <template>
   <div
+  :id="`card_${id}`"
     :class="{
       'text-white-dark': ['green', 'blue', 'black'].includes(widget.selectedColor),
       'text-green': ['beige', 'white'].includes(widget.selectedColor)
     }"
-    class="pb-9 max-w-[220px]"
+    class="card pb-9 max-w-[220px] "
   >
     <div
+    :id="`card_head_${id}`"
       :class="{
         'bg-blue': widget.selectedColor == 'blue',
         'bg-green': widget.selectedColor == 'green',
@@ -14,12 +16,12 @@
         'bg-white-dark': widget.selectedColor == 'white',
         'bg-grey-darker': widget.selectedColor == 'black'
       }"
-      class="rounded-lg flex items-center p-3 h-[66px]"
+      class="card-head rounded-lg flex items-center p-3 h-[66px]"
     >
       <icon-logo class="mr-2.5"></icon-logo>
       <div class="flex flex-col">
-        <span class="text-xs">This product {{ widget.action }}</span>
-        <span class="text-[17px] font-bold truncate">{{ widget.amount }} {{ widget.type }}</span>
+        <span class="text-action text-xs">This product {{ widget.action }}</span>
+        <span class="text-amount-type text-[17px] font-bold truncate">{{ widget.amount }} {{ widget.type }}</span>
       </div>
     </div>
     <div class="px-1">
@@ -27,7 +29,7 @@
         <li class="mt-2.5 flex items-center justify-between">
           <div>Link to Public Profile <info-tooltip></info-tooltip></div>
           <base-checkbox
-            :id="`${id}-linked`"
+            :id="`input_linked_${id}`"
             :value="widget.linked"
             @update="setLinkedStatus"
           ></base-checkbox>
@@ -42,7 +44,7 @@
         <li class="mt-2.5 flex items-center justify-between">
           <div>Activate badge</div>
           <base-toggle
-            :id="`${id}-active`"
+            :id="`input_active_${id}`"
             :value="widget.active"
             @update="setActiveStatus"
           ></base-toggle>
@@ -72,12 +74,12 @@ export default defineComponent({
   },
   props: {
     widget: { type: Object as PropType<WidgetProductsModel>, required: true },
-    id: { type: Number, required: true }
   },
   setup(props) {
     const store = useStore()
-    const { id } = props
+    const { widget:{id} } = props
     return {
+      id,
       setActiveStatus(value: boolean) {
         store.commit('widget_products/setActive', { id, value })
       },

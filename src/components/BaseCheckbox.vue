@@ -32,6 +32,7 @@ export default defineComponent({
     return {
       handleChange(event: Event): void {
         const checked = getInputBooleanValue(event)
+        console.log(checked,checked)
         emit('update', checked)
       }
     }

@@ -25,7 +25,5 @@ export default defineComponent({
     IconInfo,
     BaseTooltip
   },
-
-  setup(props) {}
 })
 </script>

@@ -1,6 +1,9 @@
 <template>
   <div v-if="!widgetProducts.length">Loading...</div>
-  <div  v-else class="rounded-lg panel-shadow bg-white-dark max-w-[850px] w-full m-6 min-h-[45%] p-9">
+  <div
+    v-else
+    class="rounded-lg panel-shadow bg-white-dark max-w-[850px] w-full m-6 min-h-[45%] p-9"
+  >
     <h1
       class="text-3xl text-center md:text-left text-dark_grey font-semibold border-b-2 border-grey pb-3 mb-5"
     >
@@ -9,7 +12,6 @@
     <div class="flex justify-between items-center flex-col md:flex-row">
       <widget-card
         v-for="widget in widgetProducts"
-        :id="widget.id"
         :key="widget.id"
         :widget="widget"
       ></widget-card>
@@ -30,7 +32,7 @@ export default defineComponent({
     const store = useStore()
 
     const widgetProducts = computed(() => store.getters['widget_products/getAll'])
-    onMounted(async ()=>{
+    onMounted(async () => {
       await store.dispatch('widget_products/fetchAll')
     })
     return { widgetProducts }

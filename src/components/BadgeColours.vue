@@ -4,7 +4,7 @@
       v-for="colour in badgeColours"
       :key="colour"
       :class="{
-        ' border-[1.5px] border-grey': selectedColor == colour,
+        ' border-[1.5px] border-grey selected': selectedColor == colour,
         'bg-blue': colour == 'blue',
         'bg-green': colour == 'green',
         'bg-beige': colour == 'beige',
