@@ -1,3 +1,4 @@
+import { devlog } from '@/utils/devlog'
 import axios, {
   type AxiosResponse,
   type AxiosInstance,
@@ -22,7 +23,7 @@ const apiService: AxiosInstance = axios.create(config)
 const errorHandler = (error: AxiosError) => {
   const isRespError = apiError(error)
   if (isRespError) {
-    console.log(isRespError)
+    devlog(isRespError)
   }
   return Promise.reject({ ...error })
 }

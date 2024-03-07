@@ -5,12 +5,8 @@ import type { ActionTree } from 'vuex'
 
 const actions: ActionTree<WidgetProductsState, RootState> = {
   async fetchAll({ commit }) {
-    try {
-      const all = await WidgetProductsService.list()
-      commit('setAll', all)
-    } catch (error) {
-      console.log(error)
-    }
+    const all = await WidgetProductsService.list()
+    commit('setAll', all)
   }
 }
 export default actions
