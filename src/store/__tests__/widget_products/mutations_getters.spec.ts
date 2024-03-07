@@ -1,9 +1,7 @@
-// mutations.spec.js
 import { expect, describe, it } from 'vitest'
 import mutations from '../../modules/widget_products/mutations'
 import getters from '../../modules/widget_products/getters'
 
-// destructure assign `mutations`
 const { setAll, setActive, setLinked, setColor } = mutations
 const { getAll, getById } = getters
 const state = {
