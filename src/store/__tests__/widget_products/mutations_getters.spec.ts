@@ -38,28 +38,30 @@ const all = [
 ]
 describe('widget_products mutations and getters', () => {
     it('sets all', () => {
-        setAll(state, all)
-        expect(state.all).toEqual(getAll(state))
+        setAll(state, all);
+        expect(state.all).toEqual(getAll(state));
     })
     it('sets active ', () => {
         const id = 2;
         const value = true;
-        setActive(state, { id, value })
-        expect(getById(state)(id)).toBeDefined()
-        expect(getById(state)(id)?.active).toBeTruthy()
+        const others = getAll(state).filter(w => w.id !== id);
+        setActive(state, { id, value });
+        expect(getById(state)(id)).toBeDefined();
+        expect(others.every(({ active }) => active === false)).toBeTruthy();
+        expect(getById(state)(id)?.active).toBeTruthy();
     })
     it('sets linked ', () => {
         const id = 3;
         const value = true;
-        setLinked(state, { id, value })
-        expect(getById(state)(id)).toBeDefined()
-        expect(getById(state)(id)?.linked).toBeTruthy()
+        setLinked(state, { id, value });
+        expect(getById(state)(id)).toBeDefined();
+        expect(getById(state)(id)?.linked).toBeTruthy();
     })
     it('sets color ', () => {
         const id = 3;
         const value = 'beige';
-        setColor(state, { id, value })
-        expect(getById(state)(id)).toBeDefined()
-        expect(getById(state)(id)?.selectedColor).toBe('beige')
+        setColor(state, { id, value });
+        expect(getById(state)(id)).toBeDefined();
+        expect(getById(state)(id)?.selectedColor).toBe('beige');
     })
 })
