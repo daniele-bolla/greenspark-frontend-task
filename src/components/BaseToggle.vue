@@ -9,25 +9,16 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { getInputBooleanValue } from '@/utils/getInputBooleanValue'
+import {useBooleanInput, props} from '@/composables/useBooleanInput' 
+
 export default defineComponent({
-  props: {
-    id: {
-      type: String,
-      required: true
-    },
-    value: {
-      type: Boolean,
-      required: true
-    }
-  },
+  props,
   emits: ['update'],
+
   setup(_, { emit }) {
+    const {handleChange} = useBooleanInput(emit)
     return {
-      handleChange(event: Event): void {
-        const checked = getInputBooleanValue(event)
-        emit('update', checked)
-      }
+      handleChange
     }
   }
 })
