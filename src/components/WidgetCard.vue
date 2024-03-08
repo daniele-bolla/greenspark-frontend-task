@@ -1,14 +1,14 @@
 <template>
   <div
-  :id="`card_${id}`"
+    :id="`card_${id}`"
     :class="{
       'text-white-dark': ['green', 'blue', 'black'].includes(widget.selectedColor),
       'text-green': ['beige', 'white'].includes(widget.selectedColor)
     }"
-    class="card pb-9 max-w-[220px] "
+    class="card pb-9 max-w-[220px]"
   >
     <div
-    :id="`card_head_${id}`"
+      :id="`card_head_${id}`"
       :class="{
         'bg-blue': widget.selectedColor == 'blue',
         'bg-green': widget.selectedColor == 'green',
@@ -21,7 +21,9 @@
       <icon-logo class="mr-2.5"></icon-logo>
       <div class="flex flex-col">
         <span class="text-action text-xs">This product {{ widget.action }}</span>
-        <span class="text-amount-type text-[17px] font-bold truncate">{{ widget.amount }} {{ widget.type }}</span>
+        <span class="text-amount-type text-[17px] font-bold truncate"
+          >{{ widget.amount }} {{ widget.type }}</span
+        >
       </div>
     </div>
     <div class="px-1">
@@ -73,11 +75,13 @@ export default defineComponent({
     InfoTooltip
   },
   props: {
-    widget: { type: Object as PropType<WidgetProductsModel>, required: true },
+    widget: { type: Object as PropType<WidgetProductsModel>, required: true }
   },
   setup(props) {
     const store = useStore()
-    const { widget:{id} } = props
+    const {
+      widget: { id }
+    } = props
     return {
       id,
       setActiveStatus(value: boolean) {

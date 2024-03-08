@@ -10,11 +10,7 @@
       Per product widgets
     </h1>
     <div class="flex justify-between items-center flex-col md:flex-row">
-      <widget-card
-        v-for="widget in widgetProducts"
-        :key="widget.id"
-        :widget="widget"
-      ></widget-card>
+      <widget-card v-for="widget in widgetProducts" :key="widget.id" :widget="widget"></widget-card>
     </div>
   </div>
 </template>

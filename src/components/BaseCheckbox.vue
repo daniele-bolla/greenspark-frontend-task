@@ -14,14 +14,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import {useBooleanInput, props} from '@/composables/useBooleanInput' 
+import { useBooleanInput, props } from '@/composables/useBooleanInput'
 
 export default defineComponent({
   props,
   emits: ['update'],
 
   setup(_, { emit }) {
-    const {handleChange} = useBooleanInput(emit)
+    const { handleChange } = useBooleanInput(emit)
     return {
       handleChange
     }
