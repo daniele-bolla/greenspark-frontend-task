@@ -1,21 +1,12 @@
 <template>
   <div
     :id="`card_${id}`"
-    :class="{
-      'text-white-dark': ['green', 'blue', 'black'].includes(widget.selectedColor),
-      'text-green': ['beige', 'white'].includes(widget.selectedColor)
-    }"
+    :class="`text-${badgeColoursMap[widget.selectedColor]['text']}`"
     class="card pb-9 max-w-[220px]"
   >
     <div
       :id="`card_head_${id}`"
-      :class="{
-        'bg-blue': widget.selectedColor == 'blue',
-        'bg-green': widget.selectedColor == 'green',
-        'bg-beige': widget.selectedColor == 'beige',
-        'bg-white-dark': widget.selectedColor == 'white',
-        'bg-grey-darker': widget.selectedColor == 'black'
-      }"
+      :class="`bg-${badgeColoursMap[widget.selectedColor]['bg']}`"
       class="card-head rounded-lg flex items-center p-3 h-[66px]"
     >
       <icon-logo class="mr-2.5"></icon-logo>
@@ -57,7 +48,7 @@
 </template>
 
 <script lang="ts">
-import type { WidgetProductsModel } from '@/models/WidgetProductsModel'
+import { badgeColoursMap, type WidgetProductsModel } from '@/models/WidgetProductsModel'
 import { type PropType, defineComponent } from 'vue'
 import IconLogo from '../assets/IconLogo.vue'
 import BadgeColours from './BadgeColours.vue'
@@ -84,6 +75,7 @@ export default defineComponent({
     } = props
     return {
       id,
+      badgeColoursMap,
       setActiveStatus(value: boolean) {
         store.commit('widget_products/setActive', { id, value })
       },

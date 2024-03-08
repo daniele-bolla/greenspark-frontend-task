@@ -1,7 +1,8 @@
-/** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
-
-// import {badgeColoursMap} from "./src/models/WidgetProductsModel"
+import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
+import { badgeColoursMap } from './src/models/WidgetProductsModel'
+const bgBadgeColours = Object.values(badgeColoursMap).map((c) => `bg-${c.bg}`)
+const textBadgeColours = Object.values(badgeColoursMap).map((c) => `text-${c.text}`)
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts}'],
   theme: {
@@ -27,7 +28,7 @@ export default {
         dark: '#F9F9F9'
       }
     }
-    // safelist: Object.values(badgeColoursMap)
   },
+  safelist: [...bgBadgeColours, ...new Set(textBadgeColours)],
   plugins: []
-}
+} satisfies Config

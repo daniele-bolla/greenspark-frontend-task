@@ -1,14 +1,14 @@
-export const badgeColours = ['white', 'black', 'blue', 'green', 'beige'] as const
+export const badgeColoursMap = {
+  white: { bg: 'white-dark', text: 'green' },
+  black: { bg: 'grey-darker', text: 'white-dark' },
+  blue: { bg: 'blue', text: 'white-dark' },
+  green: { bg: 'green', text: 'white-dark' },
+  beige: { bg: 'beige', text: 'green' }
+}
 
-// export const badgeColoursMap = {
-//     "white":"white-dark",
-//     "black":"grey-darker",
-//     "blue":"blue",
-//     "green":"green",
-//     "beige":"beige"
-// }
-// type Colors = keyof typeof badgeColoursMap;
-export type Colors = (typeof badgeColours)[number]
+export type Colors = keyof typeof badgeColoursMap
+export const badgeColours = Object.keys(badgeColoursMap) as [Colors]
+
 type Type = 'carbon' | 'plastic bottles' | 'trees'
 type Action = 'collects' | 'plants' | 'offsets'
 
