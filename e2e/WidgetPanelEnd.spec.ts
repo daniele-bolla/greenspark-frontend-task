@@ -31,7 +31,7 @@ test('Sets correct card head color', async ({ page }) => {
 /*
 Based on the fact that the api returns the first widget with selectedColor = green
 */
-test('Sets correct card head color', async ({ page }) => {
+test('Sets one active status per time', async ({ page }) => {
   await page.goto('http://localhost:5173/')
 
   const responsePromise = page.waitForResponse('https://api.mocki.io/v2/016d11e8/product-widgets')
