@@ -8,7 +8,7 @@ import BadgeColours from '@/components/BadgeColours.vue'
 import InfoTooltip from '@/components/InfoTooltip.vue'
 import BaseCheckbox from '@/components/BaseCheckbox.vue'
 import BaseToggle from '@/components/BaseToggle.vue'
-import { beige, blue, green } from '@/components/__tests__/mocks'
+import { beige, blue, green } from '@/units/components/mockApi'
 
 const mockStore = createStore({
   modules: {

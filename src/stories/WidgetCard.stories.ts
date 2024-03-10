@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 
 import WidgetCard from '@/components/WidgetCard.vue'
-import { beige, blue, green } from '@/components/__tests__/mocks'
+import { beige, blue, green } from '@/units/components/mockApi'
 
 const meta = {
   title: 'WidgetCard',

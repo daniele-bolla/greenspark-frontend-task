@@ -20,6 +20,6 @@ export const Selected: Story = {
 
 export const NotSelected: Story = {
   args: {
-    value: true
+    value: false
   }
 }
