@@ -8,15 +8,7 @@ module.exports = {
     es2024: true,
     node: true
   },
-  extends: [
-    'plugin:vue/vue3-recommended',
-    'plugin:vuejs-accessibility/recommended',
-    'eslint:recommended',
-    'prettier',
-    '@vue/typescript/recommended',
-    '@vue/prettier',
-    '@vue/eslint-config-typescript'
-  ],
+  extends: ['plugin:vue/vue3-recommended', 'plugin:vuejs-accessibility/recommended', 'eslint:recommended', 'prettier', '@vue/typescript/recommended', '@vue/prettier', '@vue/eslint-config-typescript', 'plugin:storybook/recommended'],
   parserOptions: {
     ecmaVersion: 'latest'
   },
