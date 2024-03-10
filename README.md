@@ -18,6 +18,14 @@ npm  run  build
 ```sh
 npm  run  test:unit
 ```
+### Run E2e Tests with [Playwright](https://playwright.dev/)
+```sh
+npm  run  test:e2e
+```
+### Run Component Tests [Storybook](https://storybook.js.org/)
+```sh
+npm  run  storybook
+```
 ### Lint with [ESLint](https://eslint.org/)
 ```sh
 npm  run  lint
