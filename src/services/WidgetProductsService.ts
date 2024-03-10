@@ -1,5 +1,5 @@
-import ApiService from './ApiService'
-import type { WidgetProductsModel } from '../models/WidgetProductsModel'
+import ApiService from '@/services/ApiService'
+import type { WidgetProductsModel } from '@/models/WidgetProductsModel'
 const API_ENDPOINT = '/product-widgets'
 
 async function list() {

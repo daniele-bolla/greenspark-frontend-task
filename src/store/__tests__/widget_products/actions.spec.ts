@@ -1,5 +1,5 @@
 import { expect, describe, it, vi } from 'vitest'
-import actions from '../../modules/widget_products/actions'
+import actions from '@/store/modules/widget_products/actions'
 import type { WidgetProductsModel } from '@/models/WidgetProductsModel'
 const all = [
   {

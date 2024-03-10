@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 
-import BaseToggle from '../components/BaseToggle.vue'
+import BaseToggle from '@/components/BaseToggle.vue'
 
 const meta = {
   title: 'BaseToggle',

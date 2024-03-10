@@ -50,11 +50,11 @@
 <script lang="ts">
 import { badgeColoursMap, type WidgetProductsModel } from '@/models/WidgetProductsModel'
 import { type PropType, defineComponent } from 'vue'
-import IconLogo from '../assets/IconLogo.vue'
-import BadgeColours from './BadgeColours.vue'
-import BaseCheckbox from './BaseCheckbox.vue'
-import BaseToggle from './BaseToggle.vue'
-import InfoTooltip from './InfoTooltip.vue'
+import IconLogo from '@/assets/IconLogo.vue'
+import BadgeColours from '@/components/BadgeColours.vue'
+import BaseCheckbox from '@/components/BaseCheckbox.vue'
+import BaseToggle from '@/components/BaseToggle.vue'
+import InfoTooltip from '@/components/InfoTooltip.vue'
 import { useStore } from 'vuex'
 
 export default defineComponent({

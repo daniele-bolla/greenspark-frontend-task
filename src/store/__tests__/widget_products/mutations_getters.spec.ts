@@ -1,6 +1,6 @@
 import { expect, describe, it } from 'vitest'
-import mutations from '../../modules/widget_products/mutations'
-import getters from '../../modules/widget_products/getters'
+import mutations from '@/store/modules/widget_products/mutations'
+import getters from '@/store/modules/widget_products/getters'
 
 const { setAll, setActive, setLinked, setColor } = mutations
 const { getAll, getById } = getters

@@ -1,14 +1,14 @@
 import { describe, it, expect } from 'vitest'
 
 import { mount } from '@vue/test-utils'
-import WidgetCard from '../WidgetCard.vue'
+import WidgetCard from '@/components/WidgetCard.vue'
 import { createStore } from 'vuex'
-import mutations from '../../store/modules/widget_products/mutations'
-import BadgeColours from '../BadgeColours.vue'
-import InfoTooltip from '../InfoTooltip.vue'
-import BaseCheckbox from '../BaseCheckbox.vue'
-import BaseToggle from '../BaseToggle.vue'
-import { beige, blue, green } from './mocks'
+import mutations from '@/store/modules/widget_products/mutations'
+import BadgeColours from '@/components/BadgeColours.vue'
+import InfoTooltip from '@/components/InfoTooltip.vue'
+import BaseCheckbox from '@/components/BaseCheckbox.vue'
+import BaseToggle from '@/components/BaseToggle.vue'
+import { beige, blue, green } from '@/components/__tests__/mocks'
 
 const mockStore = createStore({
   modules: {

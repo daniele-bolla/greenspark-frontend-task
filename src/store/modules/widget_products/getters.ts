@@ -1,4 +1,4 @@
-import type { WidgetProductsState } from './state'
+import type { WidgetProductsState } from '@/store/modules/widget_products/state'
 
 const getAll = (state: WidgetProductsState): WidgetProductsState['all'] => state.all
 const getById = (state: WidgetProductsState) => (widgetID: number) =>

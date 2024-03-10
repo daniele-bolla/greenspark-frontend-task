@@ -16,9 +16,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import IconInfo from '../assets/IconInfo.vue'
-
-import BaseTooltip from './BaseTooltip.vue'
+import IconInfo from '@/assets/IconInfo.vue'
+import BaseTooltip from '@/components/BaseTooltip.vue'
 
 export default defineComponent({
   components: {

@@ -1,6 +1,6 @@
 import type { RootState } from './index'
-import WidgetProductsService from '../../../services/WidgetProductsService'
-import type { WidgetProductsState } from './state'
+import WidgetProductsService from '@/services/WidgetProductsService'
+import type { WidgetProductsState } from '@/store/modules/widget_products/state'
 import type { ActionTree } from 'vuex'
 
 const actions: ActionTree<WidgetProductsState, RootState> = {

@@ -1,10 +1,10 @@
 import { describe, it, expect, vi } from 'vitest'
 
 import { shallowMount } from '@vue/test-utils'
-import WidgetsPanel from '../WidgetsPanel.vue'
+import WidgetsPanel from '@/components/WidgetsPanel.vue'
 import { createStore } from 'vuex'
-import getters from '../../store/modules/widget_products/getters'
-import WidgetCard from '../WidgetCard.vue'
+import getters from '@/store/modules/widget_products/getters'
+import WidgetCard from '@/components/WidgetCard.vue'
 
 const state = {
   all: [

@@ -18,7 +18,7 @@
 <script lang="ts">
 import { computed, defineComponent, onMounted } from 'vue'
 import { useStore } from 'vuex'
-import WidgetCard from './WidgetCard.vue'
+import WidgetCard from '@/components/WidgetCard.vue'
 
 export default defineComponent({
   components: {

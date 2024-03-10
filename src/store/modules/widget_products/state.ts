@@ -1,4 +1,4 @@
-import { type WidgetProductsModel } from '../../../models/WidgetProductsModel'
+import { type WidgetProductsModel } from '@/models/WidgetProductsModel'
 
 export interface WidgetProductsState {
   all: WidgetProductsModel[]

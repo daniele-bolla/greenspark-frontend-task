@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 
 import { shallowMount } from '@vue/test-utils'
-import BaseToggle from '../BaseToggle.vue'
+import BaseToggle from '@/components/BaseToggle.vue'
 
 describe('BaseToggle', () => {
   it('renders properly', async () => {

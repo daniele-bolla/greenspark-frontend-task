@@ -1,6 +1,6 @@
 import type { MutationTree } from 'vuex'
-import type { WidgetProductsState } from './state'
-import { type Colors } from '../../../models/WidgetProductsModel'
+import type { WidgetProductsState } from '@/store/modules/widget_products/state'
+import { type Colors } from '@/models/WidgetProductsModel'
 interface setColorParams {
   id: number
   value: Colors

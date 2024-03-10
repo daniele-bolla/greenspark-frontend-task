@@ -1,8 +1,8 @@
-import mutations from './mutations'
-import actions from './actions'
-import getters from './getters'
-import state from './state'
-import type { WidgetProductsState } from './state'
+import mutations from '@/store/modules/widget_products/mutations'
+import actions from '@/store/modules/widget_products/actions'
+import getters from '@/store/modules/widget_products/getters'
+import state from '@/store/modules/widget_products/state'
+import type { WidgetProductsState } from '@/store/modules/widget_products/state'
 
 import type { Module } from 'vuex'
 

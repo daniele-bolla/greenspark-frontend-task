@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 
 import { shallowMount } from '@vue/test-utils'
-import BadgeColours from '../BadgeColours.vue'
+import BadgeColours from '@/components/BadgeColours.vue'
 import { badgeColours } from '@/models/WidgetProductsModel'
 
 describe('BadgeColours', () => {

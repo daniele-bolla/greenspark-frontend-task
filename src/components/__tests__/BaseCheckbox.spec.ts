@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 
 import { shallowMount } from '@vue/test-utils'
-import BaseCheckbox from '../BaseCheckbox.vue'
+import BaseCheckbox from '@/components/BaseCheckbox.vue'
 
 describe('BaseCheckbox', () => {
   it('renders properly', async () => {
