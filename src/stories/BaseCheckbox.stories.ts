@@ -6,7 +6,7 @@ const meta = {
   title: 'BaseCheckbox',
   component: BaseCheckbox,
   tags: ['autodocs'],
-  args: { value: false }
+  args: { value: false, labelDescription: 'Test' }
 } satisfies Meta<typeof BaseCheckbox>
 
 export default meta

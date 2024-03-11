@@ -31,5 +31,5 @@ npm  run  storybook
 npm  run  lint
 ```
 - I assume that the API will never return a list of widget_products with more than one active state.
-- I am not satisfied that the Tailwind classes are not formatted in a readable way.
+- I am not satisfied with the formatting of Tailwind classes. Normally i handle it with prettier `"printWidth": 100` but for some reson this does not work.
 - Tested on Google Chrome 105.0.5195.125 and Mozilla Firefox 123.0

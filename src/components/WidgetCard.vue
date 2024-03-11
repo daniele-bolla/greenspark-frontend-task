@@ -23,6 +23,7 @@
           <div>Link to Public Profile <info-tooltip></info-tooltip></div>
           <base-checkbox
             :id="`input_linked_${id}`"
+            :label-description="'Link to Public Profile'"
             :value="widget.linked"
             @update="setLinkedStatus"
           ></base-checkbox>
@@ -38,6 +39,7 @@
           <div>Activate badge</div>
           <base-toggle
             :id="`input_active_${id}`"
+            :label-description="'Activate badge'"
             :value="widget.active"
             @update="setActiveStatus"
           ></base-toggle>

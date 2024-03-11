@@ -11,7 +11,9 @@
       ]"
       class="box-border w-4 h-4 mr-1.5 last:mr-0 hover:cursor-pointer hover:opacity-80"
       @click="handleClick(colour)"
-    ></button>
+    >
+      <span class="sr-only">Select badge colour: {{ colour }}</span>
+    </button>
   </div>
 </template>
 

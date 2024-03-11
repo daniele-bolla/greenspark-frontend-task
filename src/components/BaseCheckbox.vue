@@ -1,6 +1,10 @@
 <template>
   <div class="flex">
-    <label :for="id" class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">
+    <label
+      :for="id"
+      :aria-label="labelDescription"
+      class="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+    >
       <input
         :id="id"
         type="checkbox"

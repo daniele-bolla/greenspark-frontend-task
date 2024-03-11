@@ -6,7 +6,7 @@ const meta = {
   title: 'BaseToggle',
   component: BaseToggle,
   tags: ['autodocs'],
-  args: { value: false }
+  args: { value: false, labelDescription: 'Test' }
 } satisfies Meta<typeof BaseToggle>
 
 export default meta

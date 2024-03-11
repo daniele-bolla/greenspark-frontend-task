@@ -4,6 +4,10 @@ export const props = {
     type: String,
     required: true
   },
+  labelDescription: {
+    type: String,
+    required: true
+  },
   value: {
     type: Boolean,
     required: true
