@@ -5,11 +5,14 @@
       :key="colour"
       :class="[
         {
-          ' border-[1.5px] border-grey selected': selectedColor == colour
+          'border-[1.5px] border-grey selected': selectedColor == colour,
+          'opacity-5 cursor-not-allowed': !isActive,
+          'hover:cursor-pointer hover:opacity-80': isActive
         },
         `bg-${badgeColoursMap[colour]['bg']}`
       ]"
-      class="box-border w-4 h-4 mr-1.5 last:mr-0 hover:cursor-pointer hover:opacity-80"
+      class="box-border w-4 h-4 mr-1.5 last:mr-0"
+      :disabled="!isActive"
       @click="handleClick(colour)"
     >
       <span class="sr-only">Select badge colour: {{ colour }}</span>
@@ -25,6 +28,10 @@ export default defineComponent({
   props: {
     selectedColor: {
       type: String as PropType<WidgetProductsModel['selectedColor']>,
+      required: true
+    },
+    isActive: {
+      type: Boolean,
       required: true
     }
   },

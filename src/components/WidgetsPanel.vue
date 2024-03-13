@@ -9,7 +9,7 @@
     >
       Per product widgets
     </h1>
-    <div class="flex justify-between items-center flex-col md:flex-row">
+    <div class="grid md:grid-cols-3 gap-2 grid-1">
       <widget-card v-for="widget in widgetProducts" :key="widget.id" :widget="widget"></widget-card>
     </div>
   </div>

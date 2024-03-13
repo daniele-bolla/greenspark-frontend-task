@@ -2,7 +2,7 @@
   <div
     :id="`card_${id}`"
     :class="`text-${badgeColoursMap[widget.selectedColor]['text']}`"
-    class="card pb-9 max-w-[220px]"
+    class="card pb-9 w-full"
   >
     <div
       :id="`card_head_${id}`"
@@ -31,6 +31,7 @@
         <li class="mt-2.5 flex items-center justify-between">
           <div>Badge colour</div>
           <badge-colours
+            :is-active="widget.active"
             :selected-color="widget.selectedColor"
             @update="setColorStatus"
           ></badge-colours>
